@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RichMap - Play & Win</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #000000, #ff004f);
+      color: #fff;
+      text-align: center;
+    }
+    header {
+      background: #ff004f;
+      padding: 25px;
+      font-size: 32px;
+      font-weight: bold;
+      animation: flash 1.5s infinite;
+    }
+    @keyframes flash {
+      0%, 100% { color: yellow; }
+      50% { color: white; }
+    }
+    .container {
+      padding: 20px;
+    }
+    .offer-box {
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px dashed gold;
+      border-radius: 15px;
+      padding: 25px;
+      margin: 20px auto;
+      width: 90%;
+      max-width: 420px;
+    }
+    .offer-box h2 {
+      color: gold;
+      font-size: 24px;
+    }
+    .upi-box {
+      background: #222;
+      padding: 12px;
+      margin: 10px auto 25px;
+      border-radius: 10px;
+      font-size: 18px;
+    }
+    .pay-btn {
+      background: gold;
+      color: #000;
+      font-size: 20px;
+      padding: 15px 30px;
+      border-radius: 12px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 10px;
+    }
+    .form-link {
+      color: #00e676;
+      text-decoration: underline;
+      display: block;
+      margin-top: 10px;
+    }
+    .winner-box {
+      margin-top: 40px;
+      background: rgba(255,255,255,0.1);
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid lime;
+    }
+    .winner-name {
+      font-size: 22px;
+      color: lime;
+    }
+    .games-list {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #00e6e6;
+    }
+  </style>
+</head>
+<body>
+  <header>🎯 RICHMAP - ENTRY ₹100 & WIN UP TO ₹10 CRORE!</header>
+  <div class="container">
+    <div class="offer-box">
+      <h2>💰 Play Now & Stand a Chance to Win ₹10 Crore+</h2>
+      <div class="games-list">
+        🎮 Games Included:<br/>
+        1. Spin to Win<br/>
+        2. Number Pick<br/>
+        3. GanFair (Lucky Draw)<br/>
+        4. Quiz Mania<br/>
+        5. Super Match
+      </div>
+      <div class="upi-box">Pay ₹100 to UPI: <b>8687061502@ptyes</b></div>
+      <a class="pay-btn" href="upi://pay?pa=8687061502@ptyes&pn=RichMap&am=100&cu=INR" target="_blank">Pay ₹100 & Play</a>
+      <a class="form-link" href="https://forms.gle/2jSdMEuqbrBUDxvy7" target="_blank">Submit Payment Screenshot</a>
+    </div>
+
+    <div class="winner-box">
+      🏆 Last Winner: <span class="winner-name">Rahul S. (UPI ✨₹5000)</span><br/>
+      Next winner could be YOU!
+    </div>
+  </div>
+</body>
+</html>
