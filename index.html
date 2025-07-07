@@ -105,8 +105,9 @@
   </div>
 </body>
 </html> 
-commit change comond 
-update new version 
+
+
+
 import React from 'react';
 import { HomeIcon, GiftIcon, UserIcon, HeadsetIcon, CogIcon } from '@heroicons/react/outline';
 
@@ -173,3 +174,86 @@ function App() {
     
 
 export default App;
+
+// Folder Structure // full-code-website/ // ├── public/ // │   ├── styles.css // │   ├── script.js // │   ├── images/ (optional for icons/images) // │   ├── index.html (First Website Page) // │   └── games.html (Second Website Page) // └── app.js (Node.js Backend) // // Run with: npm install express && node app.js
+
+// === app.js ===
+
+const express = require('express'); const path = require('path');
+
+const app = express(); const PORT = process.env.PORT || 3000;
+
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.get('/', (req, res) => { res.sendFile(path.join(__dirname, 'public/index.html')); });
+
+app.get('/games', (req, res) => { res.sendFile(path.join(__dirname, 'public/games.html')); });
+
+app.listen(PORT, () => { console.log(Server running at http://localhost:${PORT}); });
+
+// === public/styles.css ===
+
+body { font-family: Arial, sans-serif; background-color: #f0f0f0; margin: 0; padding: 0; }
+
+nav { background-color: #333; color: #fff; padding: 1rem; text-align: center; }
+
+nav a { color: #fff; text-decoration: none; margin: 0 15px; }
+
+.container { padding: 2rem; }
+
+.game-card { background: #fff; padding: 1rem; margin: 1rem 0; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); }
+
+button { padding: 10px 20px; background-color: #28a745; color: #fff; border: none; border-radius: 5px; cursor: pointer; }
+
+button:hover { background-color: #218838; }
+
+// === public/index.html ===
+
+<!DOCTYPE html><html>
+<head>
+  <title>Entity Name - Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/games">Games</a>
+  </nav>  <div class="container">
+    <h1>Welcome to Entity Name</h1>
+    <p>This is the homepage with navigation.</p>
+    <p></p>
+    <p></p>
+  </div>
+</body>
+</html>// === public/games.html ===
+
+<!DOCTYPE html><html>
+<head>
+  <title>Games Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/games">Games</a>
+  </nav>  <div class="container">
+    <h1>Available Games</h1>
+    <div class="game-card">Rummy App</div>
+    <div class="game-card">Spin App</div>
+    <div class="game-card">Game App 1</div>
+    <div class="game-card">Game App 2</div>
+    <div class="game-card">Game App 3</div>
+    <div class="game-card">Game App 4</div>
+    <div class="game-card">Game App 5</div><h2>Game Play - 1% Win Chance System</h2>
+<button onclick="playGame()">Play Game</button>
+<p id="gameResult"></p>
+
+<script>
+  function playGame() {
+    const randomNumber = Math.random();
+    if (randomNumber <= 0.01) {
+      document.getElementById('gameResult').innerText = '🎉 You Win!';
+    } else {
+      document.getElementById('gameResult').innerText = '😞 You Lose!';
+    }
+  }
